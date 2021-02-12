@@ -30,12 +30,15 @@ def writeToFile(keys):
                 remove_Quotes = str(key).replace("'", "") # removes Quotations for a More readable Output
                 if remove_Quotes.find("space") > 0:
                     fileOutput.write("\n")
-                
+                    fileOutput.close()
+                    
                 elif remove_Quotes.find("Key") == -1:
                     fileOutput.write(remove_Quotes)
-                   
+                    fileOutput.close()
+                 
                 else:
                     fileOutput.write(str(key))
+                    fileOutput.close()
 
     except Exception as ex:
         raise ex
