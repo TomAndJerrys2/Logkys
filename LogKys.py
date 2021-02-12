@@ -33,6 +33,9 @@ def writeToFile(keys):
                 
                 elif remove_Quotes.find("Key") == -1:
                     fileOutput.write(remove_Quotes)
+                   
+                else:
+                    fileOutput.write(str(key))
 
     except Exception as ex:
         raise ex
